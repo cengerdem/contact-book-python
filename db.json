@@ -1,0 +1,19 @@
+{
+    "contacts": [
+        {
+            "id": 1,
+            "name": "Erdem",
+            "surname": "Kopan",
+            "phone": "+905351119987",
+            "address": "Ankara"
+        },
+        {
+            "id": 2,
+            "name": "Ahmet",
+            "surname": "Demir",
+            "phone": "05551985723",
+            "address": "İstanbul"
+        }
+    ],
+    "contactLastId": 3
+}
