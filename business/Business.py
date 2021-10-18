@@ -1,6 +1,23 @@
+import os
+from datetime import datetime
 from data_access.DataAccess import ContactDataAccess
 
-class ContactBusiness:
+class BaseBusiness():
+    def __init__(self):
+        pass
+    
+    def log_info(self, guid, operation):
+        current_dir = os.path.dirname(__file__) 
+        rel_path = "../info.log"
+        info_log_file_path = os.path.join(current_dir, rel_path)
+
+        f = open(info_log_file_path, "a")
+        template = " Operation: {0} \n Session {1}. \n Operation Date: {2!r} \r\n\r\n"
+        message = template.format(operation, guid, datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+        f.write(message)
+        f.close()
+
+class ContactBusiness(BaseBusiness):
     def __init__(self):
         pass
 
