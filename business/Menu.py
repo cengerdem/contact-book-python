@@ -43,7 +43,7 @@ class Menu(BaseBusiness):
                     return None
 
                 #Validation failed and user didn't cancel the operation. 
-                #Function call itself recursively to get name again
+                #Function call itself recursively to get phone again
                 return  self.input_phone(contact_list)
         
         for contact in contact_list:
@@ -57,7 +57,7 @@ class Menu(BaseBusiness):
                     return None
 
                 #Validation failed and user didn't cancel the operation. 
-                #Function call itself recursively to get name again
+                #Function call itself recursively to get phone again
                 return  self.input_phone(contact_list)
         
         return phone
